@@ -10,7 +10,7 @@ import javax.transaction.Transactional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
-    public class DataSetup {
+public class DataSetup {
 
     private static final Logger loger = LoggerFactory.getLogger(DataSetup.class);
 

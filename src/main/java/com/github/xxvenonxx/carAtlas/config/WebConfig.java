@@ -1,3 +1,4 @@
+
 package com.github.xxvenonxx.carAtlas.config;
 
 
@@ -10,14 +11,13 @@ import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import java.util.Locale;
 
 @Configuration
-    public class WebConfig implements WebMvcConfigurer {
+public class WebConfig implements WebMvcConfigurer {
 
-        @Bean(name = "localeResolver")
-        public LocaleContextResolver getLocaleContextResolver() {
-            SessionLocaleResolver localeResolver = new SessionLocaleResolver();
-            localeResolver.setDefaultLocale(new Locale("pl", "PL"));
-            return localeResolver;
-        }
-
+    @Bean(name = "localeResolver")
+    public LocaleContextResolver getLocaleContextResolver() {
+        SessionLocaleResolver localeResolver = new SessionLocaleResolver();
+        localeResolver.setDefaultLocale(new Locale("pl", "PL"));
+        return localeResolver;
     }
 
+}
