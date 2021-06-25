@@ -24,6 +24,9 @@ public class Car {
     @Column(name = "country_name")
     private String countryName;
 
+    @ManyToOne
+    private Brand brand;
+
 
 
 }

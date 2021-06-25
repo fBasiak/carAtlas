@@ -3,6 +3,8 @@ package com.github.xxvenonxx.carAtlas.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Table(name = "brands")
@@ -24,6 +26,10 @@ public class Brand {
     @Column(name = "country_name")
     private String countryName;
 
+    @ManyToOne
+    private Country country;
+    @OneToMany(mappedBy = "brand")
+    private List<Brand> brandList = new ArrayList<>();
 
 
 }
