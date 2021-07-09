@@ -1,8 +1,11 @@
 package com.github.xxvenonxx.carAtlas.domain.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.*;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,9 +21,13 @@ import java.util.List;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
-        @Column(name = "Name", nullable = false, unique = true)
-        private String country;
-
+        @Column(name = "country_name", unique = true)
+        @NotBlank
+        @NotNull
+        private String name;
         @OneToMany(mappedBy = "country")
-    private List<Country> countryList = new ArrayList<>();
+        @ToString.Exclude
+    private List<Brand> brandList = new ArrayList<>();
+
+
 }

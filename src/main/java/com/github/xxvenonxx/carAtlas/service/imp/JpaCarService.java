@@ -35,8 +35,7 @@ public class JpaCarService implements CarService {
     public void updateCar(Car carToUpdated) {
         log.info("Updating car " + carToUpdated);
         Car car = getCarById(carToUpdated.getId());
-        car.setBrandName(carToUpdated.getBrandName());
-        car.setCountryName(carToUpdated.getCountryName());
+        car.setBrand(carToUpdated.getBrand());
         car.setModel(carToUpdated.getModel());
         car.setGeneration(carToUpdated.getGeneration());
         carRepository.save(car);
