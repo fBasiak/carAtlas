@@ -21,8 +21,8 @@ public class LoginController {
     @PostMapping
     public String LoginProcess(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
-            return "login";
+            return "redirect:/login";
         }
-        return "redirect:/app";
+        return "redirect:/";
     }
 }
