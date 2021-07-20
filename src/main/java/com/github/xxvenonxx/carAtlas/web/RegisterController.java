@@ -34,8 +34,17 @@ public class RegisterController {
     @PostMapping
     public String processRegister(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
+            //TODO Tutaj bez redirect:
             return "redirect:/register";
         }
+        //TODO Sprawdzenie czy username już istnieje
+//        if (userService.checkExists(user.getUsername())) {
+//            //1 -> nazwa pola
+//            //2 -> kod błędu (jak używamy internacjonalizacji)
+//            //3 -> komunikat błędu (jak NIE używamy internacjonalizacji)
+//            bindingResult.rejectValue("username", null, "Username already used");
+//            return "register";
+//        }
             userService.addUser(user);
             return "redirect:login";
         }

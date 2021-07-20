@@ -21,6 +21,7 @@ import java.util.List;
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
+        //TODO Samo name jest spoko, bo to w końcu klasa Country/tabela countries więc jest jednoznaczne
         @Column(name = "country_name", unique = true)
         @NotBlank
         @NotNull

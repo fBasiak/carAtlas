@@ -18,6 +18,8 @@ public class LoginController {
         model.addAttribute("user", new User());
         return "login";
     }
+
+    //TODO Obsługę POST na /login zostawiamy w SpringSecurity
     @PostMapping
     public String LoginProcess(@Valid User user, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {

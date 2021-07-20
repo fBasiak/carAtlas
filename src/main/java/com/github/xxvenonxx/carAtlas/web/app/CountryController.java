@@ -13,6 +13,7 @@ import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/country")
+//TODO Jeden kontroler jeden widok
 public class CountryController {
     private final CountryService countryService;
 

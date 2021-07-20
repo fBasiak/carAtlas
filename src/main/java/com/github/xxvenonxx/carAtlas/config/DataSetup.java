@@ -13,6 +13,7 @@ import javax.transaction.Transactional;
 import java.util.concurrent.atomic.AtomicBoolean;
 
 @Component
+//TODO Wydaje się być dłużej niepotrzebna ta klasa ;)
 public class DataSetup {
     private AtomicBoolean alreadyRun = new AtomicBoolean(false);
 

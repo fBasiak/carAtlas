@@ -18,6 +18,7 @@ public class Car {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @ManyToOne
+    //TODO Po kluczach obcych raczej spodziewamy się sufix/prefix id
     @JoinColumn(name = "brand")
     @NotNull
     @ToString.Exclude
